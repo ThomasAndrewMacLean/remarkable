@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { T } from '.';
+import { T, Footer } from '.';
 import { prefix } from '../utils';
 import { pages } from '../constants/pages';
 
@@ -13,37 +13,51 @@ type LayoutProps = {
 const Layout = ({ children, page }: LayoutProps) => {
   return (
     <Main>
-      <Header>
-        <T translationKey="title"></T>
-        <nav>
-          <ul>
-            {pages
-              .filter((p) => p.showInNav)
-              .map((pag, i) => {
-                return (
-                  <li key={i}>
-                    <NavLink active={page === pag.id} href={prefix + pag.url}>
-                      <T translationKey={pag.id + 'Title'}></T>
-                    </NavLink>
-                  </li>
-                );
-              })}
-          </ul>
-        </nav>
-      </Header>
-      {children}
-      <Footer>
-        <div>facebook</div>
-        <address>contact</address>
-      </Footer>
+      <div className="content">
+        <Header>
+          <T translationKey="title"></T>
+          <nav>
+            <ul>
+              {pages
+                .filter((p) => p.showInNav)
+                .map((pag, i) => {
+                  return (
+                    <li key={i}>
+                      <NavLink active={page === pag.id} href={prefix + pag.url}>
+                        <T translationKey={pag.id + 'Title'}></T>
+                      </NavLink>
+                    </li>
+                  );
+                })}
+            </ul>
+          </nav>
+        </Header>
+        {children}
+      </div>
+      <Footer></Footer>
     </Main>
   );
 };
 
 const Main = styled.main`
-  margin: auto;
+  /* margin: auto;
   width: 90%;
-  max-width: 900px;
+  max-width: 900px; */
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: ${(props) => `1fr ${props.theme.maxWidth} 1fr`};
+  .content {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  footer {
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
 `;
 const Header = styled.header`
   h1 {
@@ -62,6 +76,9 @@ const Header = styled.header`
     li {
       margin: 0 1rem;
     }
+    li:last-child {
+      margin-right: 0;
+    }
   }
 `;
 
@@ -76,11 +93,6 @@ const NavLink = styled.a<{ active: boolean }>`
     height: 3px;
     background: black;
   }
-`;
-const Footer = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 0;
 `;
 
 Layout.propTypes = {

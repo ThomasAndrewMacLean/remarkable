@@ -2,10 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 // import PropTypes from 'prop-types';
 
-import { T, Image, Layout, SEO } from '../components';
-import { useStore } from '../store';
+import { T, Image, Layout, SEO, Pijlers } from '../components';
 import { HELLOWORLD } from '../constants';
-import { add } from '../utils';
 import {
   TranslationContext,
   PictureContext,
@@ -15,7 +13,6 @@ import { getDataFromAirtable } from '../utils';
 import { TranslationsType, ImagesType, SEOType } from '../types';
 
 const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
-  const { count, countPlusOne } = useStore();
   return (
     <PictureContext.Provider value={pics}>
       <SEOContext.Provider value={seo}>
@@ -23,12 +20,10 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
           <Layout page="home">
             <Main>
               <SEO seo={seo}></SEO>
-              <h1>{HELLOWORLD}</h1>
-              <T translationKey="test"></T>
-              <T translationKey="test2"></T>
-              <button onClick={countPlusOne}>+</button>
-              <Image style={{ width: '100%' }} imageKey="hero-image"></Image>
-              {count}+ 1 = {add(count, 1)}
+
+              <T translationKey="introText"></T>
+
+              <Pijlers></Pijlers>
             </Main>
           </Layout>
         </TranslationContext.Provider>
@@ -38,7 +33,12 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
 };
 
 const Main = styled.main`
-  background: var(--background-dark);
+  /* background: var(--background-dark); */
+
+  blockquote {
+    width: 50%;
+    line-height: 2rem;
+  }
 `;
 
 export const getStaticProps = async () => {
