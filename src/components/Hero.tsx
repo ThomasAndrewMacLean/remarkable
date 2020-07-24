@@ -11,8 +11,9 @@ const Hero = ({}: HeroPropsType) => {
         <T translationKey="introText"></T>
         <Styles.ButtonWrap>
           <Button
-            style={{ backgroundColor: '#ef9000', color: '#ffe0b1' }}
-            label="test"
+            // style={{ backgroundColor: '#ef9000', color: '#fff' }}
+            label="cta"
+            primary={true}
             onClick={() => console.log('hello')}
           ></Button>
         </Styles.ButtonWrap>

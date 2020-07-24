@@ -6,17 +6,22 @@ type ButtonPropsType = {
   onClick?: (e: any) => void;
   link?: string;
   label: string;
+  primary?: boolean;
 };
-const Button = ({ style, onClick, label, link }: ButtonPropsType) => {
+const Button = ({ style, onClick, label, link, primary }: ButtonPropsType) => {
   if (link) {
     return (
-      <Styles.LinkWrapper style={{ ...style }} href={link}>
+      <Styles.LinkWrapper primary={primary} style={{ ...style }} href={link}>
         <T translationKey={label}></T>
       </Styles.LinkWrapper>
     );
   } else {
     return (
-      <Styles.ButtonWrapper style={{ ...style }} onClick={onClick}>
+      <Styles.ButtonWrapper
+        primary={primary}
+        style={{ ...style }}
+        onClick={onClick}
+      >
         <T translationKey={label}></T>
       </Styles.ButtonWrapper>
     );

@@ -34,10 +34,7 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
 const Main = styled.main`
   /* background: var(--background-dark); */
 
-  blockquote {
-    width: 50%;
-    line-height: 2rem;
-  }
+
 `;
 
 export const getStaticProps = async () => {

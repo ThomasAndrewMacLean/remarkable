@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap');
 
 :root {
-  --background-dark: #77f;
+  --background-dark: #ef9000;
   --border: 3px solid black;
-  --btn-color: rgba(119, 119, 255, 0.356);
-  --btn-border: #77f;
-  --highlight: rgba(119, 119, 255, 0.356);
+  --btn-light: #ffe0b1;
+  --btn-dark: #ef9000;
+  --highlight: #ffe0b1;
 }
 * {
   margin: 0;
