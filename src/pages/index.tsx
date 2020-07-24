@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 // import PropTypes from 'prop-types';
 
-import { T, Image, Layout, SEO, Pijlers } from '../components';
-import { HELLOWORLD } from '../constants';
+import { T, Layout, SEO, Pijlers, Button , Hero} from '../components';
 import {
   TranslationContext,
   PictureContext,
@@ -20,9 +19,9 @@ const IndexPage = ({ translations, pics, seo }: IndexPageProps) => {
           <Layout page="home">
             <Main>
               <SEO seo={seo}></SEO>
-
-              <T translationKey="introText"></T>
-
+              <Hero></Hero>
+             
+            
               <Pijlers></Pijlers>
             </Main>
           </Layout>

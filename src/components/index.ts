@@ -4,3 +4,5 @@ export { default as Layout } from './Layout';
 export { default as SEO } from './SEO'
 export { default as Footer } from './Footer'
 export { default as Pijlers } from './Pijlers'
+export { default as Button } from './atoms/Button'
+export { default as Hero } from './Hero'

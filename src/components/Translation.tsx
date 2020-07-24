@@ -38,9 +38,11 @@ const Translation = ({
   }
   return translation['NL zonder opmaak'] ? (
     translation && !showKeys ? (
-      <>{translation['NL zonder opmaak']}</>
+      <p style={{ ...style }}>{translation['NL zonder opmaak']}</p>
     ) : (
-      <span className="showKeys">{translationKey}</span>
+      <span style={{ ...style }} className="showKeys">
+        {translationKey}
+      </span>
     )
   ) : (
     <span

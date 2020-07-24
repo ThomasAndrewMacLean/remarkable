@@ -2,10 +2,10 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { T, Footer } from '.';
+import { T, Footer, Hero } from '.';
 import { prefix } from '../utils';
 import { pages } from '../constants/pages';
-
+import { HeroWrapper } from './Hero.styles';
 type LayoutProps = {
   children: ReactNode;
   page: string;
@@ -13,8 +13,8 @@ type LayoutProps = {
 const Layout = ({ children, page }: LayoutProps) => {
   return (
     <Main>
-      <div className="content">
-        <Header>
+      <Header>
+        <div className="content">
           <T translationKey="title"></T>
           <nav>
             <ul>
@@ -31,9 +31,9 @@ const Layout = ({ children, page }: LayoutProps) => {
                 })}
             </ul>
           </nav>
-        </Header>
-        {children}
-      </div>
+        </div>
+      </Header>
+      <div className="content">{children}</div>
       <Footer></Footer>
     </Main>
   );
@@ -51,6 +51,7 @@ const Main = styled.main`
     grid-column-start: 2;
     grid-column-end: 3;
   }
+
   footer {
     grid-row-start: 2;
     grid-row-end: 3;
@@ -63,9 +64,17 @@ const Header = styled.header`
   h1 {
     font-weight: 100;
   }
-  display: flex;
-  justify-content: space-between;
+  position: absolute;
+  /* width: ${(props) => props.theme.maxWidth}; */
+  width: 100vw;
+  background: #ffffffcc;
   padding: 4rem 0;
+  .content{
+    display: flex;
+   justify-content: space-between;
+    margin: auto;
+    width: ${(props) => props.theme.maxWidth};
+  }
   nav {
   }
   ul {

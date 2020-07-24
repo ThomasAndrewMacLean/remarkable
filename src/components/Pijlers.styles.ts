@@ -8,6 +8,8 @@ export const PijlersWrapper = styled.div`
 `;
 
 export const Card = styled.article`
+  display: flex;
+  flex-direction: column;
   h3 {
     font-size: 1rem;
     margin-bottom: 1rem;

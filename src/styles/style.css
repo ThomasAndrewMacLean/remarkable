@@ -3,6 +3,8 @@
 :root {
   --background-dark: #77f;
   --border: 3px solid black;
+  --btn-color: rgba(119, 119, 255, 0.356);
+  --btn-border: #77f;
   --highlight: rgba(119, 119, 255, 0.356);
 }
 * {
@@ -12,9 +14,9 @@
   box-sizing: border-box;
   touch-action: manipulation;
 }
- ::selection {
-  background: var(--highlight); 
-} 
+::selection {
+  background: var(--highlight);
+}
 html,
 body {
   font-family: 'Roboto Slab', sans-serif;
