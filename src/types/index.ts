@@ -24,3 +24,5 @@ export type SEOType = {
     };
   }[];
 };
+
+export type ExtraContextType = any;

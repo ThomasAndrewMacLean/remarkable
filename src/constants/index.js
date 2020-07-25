@@ -6,3 +6,5 @@ export const services = [
   { id: 'brandProtection', url: '/brandProtection' },
   { id: 'brandResearch', url: '/brandResearch' },
 ];
+
+export const extraCols = ["cases", "blogposts"]

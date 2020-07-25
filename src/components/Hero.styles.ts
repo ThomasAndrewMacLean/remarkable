@@ -27,17 +27,17 @@ export const Content = styled.div`
     width: 75%;
     line-height: 2rem;
   }
-  blockquote p {
+  /* blockquote p {
     background: rgba(0, 0, 0, 0.7);
     color: white;
     display: inline;
     padding: 3px;
     font-size: 20px;
     line-height: 1.6;
-    /* font-family: "Ubuntu",Arial,Helvetica,sans-serif; */
+  
     letter-spacing: 0.6px;
     box-shadow: 7px 0 0 rgba(0, 0, 0, 0.7), -7px 0 0 rgba(0, 0, 0, 0.7);
-  }
+  } */
 `;
 
 export const ButtonWrap = styled.div`

@@ -1,4 +1,5 @@
 import { SEOType, TranslationsType, ImagesType } from '../types';
+import { extraCols } from '../constants';
 
 export const add = (a: number, b: number): number => {
   return a + b;
@@ -44,7 +45,10 @@ export const getDataFromAirtable = async (): Promise<{
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ airtableApp: process.env.AIRTABLE_APP }),
+    body: JSON.stringify({
+      airtableApp: process.env.AIRTABLE_APP,
+      extraCols: extraCols,
+    }),
   });
   const dataFromAirtable = await dataFromAirtableJson.json();
 
