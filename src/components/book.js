@@ -25,6 +25,10 @@
         contentModules {
             ... on ContentfulLayoutHighlightedImage {
                 contentful_id
+                cta {
+                    cta
+                    json
+                  }
                 image {
                   fluid {
                     src
@@ -61,7 +65,10 @@
                 
               > {bookData.copy.copy}</p>
 
+{bookData.ctaTitle}
 <img src={imageData.image.fluid.src} alt=""/>
+
+<button dangerouslySetInnerHTML={{__html:documentToHtmlString(imageData.cta.json, options)}}></button>
        </div>
      
    )
