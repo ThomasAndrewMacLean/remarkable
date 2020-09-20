@@ -64,7 +64,12 @@ const HighlightCase = ({}) => {
         )
       })}
       <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "9rem" }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "9rem",
+          marginBottom: "97px",
+        }}
       >
         <button className="ctaButton">{cta.buttonText}</button>
       </div>

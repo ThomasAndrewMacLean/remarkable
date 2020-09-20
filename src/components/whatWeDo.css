@@ -1,0 +1,34 @@
+.whatWeDoWrap {
+  background-color: var(--colour1);
+  color: white;
+}
+
+.whatWeDoWrap h4 {
+  padding-top: 26px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+}
+.whatWeDoWrap .textWrap {
+  max-width: 90%;
+  padding-bottom: 6rem;
+  margin: auto;
+}
+.whatWeDoWrap .textWrap p {
+  max-width: 60%;
+  color: #ffffffa6;
+}
+.whatWeDoWrap .textWrap p b {
+  color: #ffffff !important;
+}
+
+.whatWeDoWrap .ctaWrap {
+  max-width: 90%;
+  padding-bottom: 3rem;
+  margin: auto;
+}
+
+.whatWeDoWrap .ctaWrap a {
+  color: white;
+}
