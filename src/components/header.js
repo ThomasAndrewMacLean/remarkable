@@ -31,7 +31,7 @@ const Header = ({}) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 1200,
           padding: `1rem 1.0875rem`,
           display: "flex",
           justifyContent: "space-between",

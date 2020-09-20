@@ -1,0 +1,59 @@
+.highlightWrap {
+  margin-top: 116px;
+}
+
+.highlightWrap .evenWrap,
+.highlightWrap .oddWrap {
+  max-width: 90%;
+  display: flex;
+  margin: auto;
+  margin-bottom: 66px;
+}
+
+.highlightWrap .oddWrap {
+  flex-direction: row-reverse;
+}
+.highlightWrap .textWrap {
+  width: 45%;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.highlightWrap .imageWrap {
+  border-radius: 4px;
+  overflow: hidden;
+  height: 430px;
+}
+
+.highlightWrap .imageWrap img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.highlightWrap .oddWrap .textWrap {
+  padding-right: 0;
+  padding-left: 2rem;
+}
+.highlightWrap h5 {
+  text-align: right;
+  color: var(--colour2);
+  font-weight: 700;
+}
+
+.highlightWrap h4 {
+  text-align: right;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.highlightWrap .services {
+  display: flex;
+}
+
+.highlightWrap .services span {
+  margin-right: 1rem;
+  font-size: 14px;
+  color: var(--colour2);
+}

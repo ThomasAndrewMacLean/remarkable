@@ -1,22 +1,33 @@
- 
 :root {
-    --colour1: #0E213F;
-    --colour2: #5EB146;
-    --white:#FFF;
+  --colour1: #0e213f;
+  --colour2: #5eb146;
+  --white: #fff;
 
-    --sub1:#B5C6D5;
-    --sub2:#9fd090;
-    --sub3:#004583;
-    --sub4:#c34f81;
-    --sub5:#f18700;
-  }
+  --sub1: #b5c6d5;
+  --sub2: #9fd090;
+  --sub3: #004583;
+  --sub4: #c34f81;
+  --sub5: #f18700;
+}
 
+@font-face {
+  font-family: neuzeitGro;
+  src: url("../static/NeuzeitGro-Reg.woff");
+}
 
-  @font-face {
-    font-family: neuzeitGro;
-    src: url('../static/NeuzeitGro-Reg.woff');
-  }
+body {
+  font-family: neuzeitGro;
+}
 
-  body{
-    font-family: neuzeitGro;
-  }
+.ctaButton {
+  color: white;
+  
+  background-color: var(--colour2);
+  padding: 19px 53px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: inherit;
+}

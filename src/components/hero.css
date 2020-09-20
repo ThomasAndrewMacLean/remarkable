@@ -3,6 +3,7 @@
   background-color: var(--colour1);
   overflow: hidden;
   position: relative;
+  padding-left: 80px;
 }
 
 .heroWrap h2 {
@@ -11,11 +12,11 @@
   font-size: 48px;
   width: 50%;
   margin-top: 127px;
-  margin-left: 80px;
+
   max-width: 400px;
 }
 
-.heroWrap .cta {
+/* .heroWrap .cta {
   color: white;
   margin-left: 80px;
   background-color: var(--colour2);
@@ -26,8 +27,8 @@
   font-family: inherit;
   text-transform: uppercase;
   font-size: inherit;
-}
-.imageWrap {
+} */
+.heroWrap .imageWrap {
   border-radius: 50%;
   width: 400px;
   height: 400px;
@@ -36,7 +37,7 @@
   right: 3rem;
   top: -3rem;
 }
-.imageWrap img {
+.heroWrap .imageWrap img {
   height: 100%;
   object-fit: cover;
 }
