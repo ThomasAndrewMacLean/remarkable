@@ -10,3 +10,13 @@
     --sub4:#c34f81;
     --sub5:#f18700;
   }
+
+
+  @font-face {
+    font-family: neuzeitGro;
+    src: url('../static/NeuzeitGro-Reg.woff');
+  }
+
+  body{
+    font-family: neuzeitGro;
+  }
