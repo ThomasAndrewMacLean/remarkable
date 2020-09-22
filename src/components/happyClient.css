@@ -1,0 +1,28 @@
+.happyClientWrap {
+  background-color: var(--colour2);
+  padding: 49px 5% 63px;
+}
+
+.happyClientWrap h4 {
+  color: white;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.happyClientWrap .clientWrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.happyClientWrap .clientWrap img {
+  width: 25%;
+}
+
+.happyClientWrap a.discover {
+  color: inherit;
+  font-size: 22px;
+  display: block;
+}
