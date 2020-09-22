@@ -50,11 +50,11 @@ const WhatWeDo = ({}) => {
 
       <div className="ctaWrap">
         <Link to="services">
-          <p
+          <div
             dangerouslySetInnerHTML={{
               __html: documentToHtmlString(whatWeDoData.cta.json, options),
             }}
-          ></p>
+          ></div>
         </Link>
       </div>
     </div>
