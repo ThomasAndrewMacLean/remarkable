@@ -1,0 +1,30 @@
+.bookWrap {
+  max-width: 90%;
+  margin: auto;
+  padding-top: 153px;
+  display: flex;
+}
+
+.bookWrap .textWrap {
+  width: 60%;
+}
+.bookWrap .textWrap a {
+  color: inherit;
+}
+.bookWrap h4 {
+  color: var(--colour2);
+  font-size: 25px;
+  line-height: 27px;
+  font-weight: 700;
+}
+
+.bookWrap .imageWrap {
+  position: relative;
+}
+.bookWrap .imageWrap .center {
+  display: flex;
+  justify-content: center;
+}
+.bookWrap .imageWrap img {
+  margin-top: -22rem;
+}
