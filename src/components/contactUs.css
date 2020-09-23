@@ -2,8 +2,10 @@
   width: 90%;
   margin: auto;
   padding: 51px;
+  padding-bottom: 31px;
   background-color: var(--sub1);
   margin-top: 87px;
+  border-radius: 4px;
   color: var(--colour1);
   display: flex;
 }

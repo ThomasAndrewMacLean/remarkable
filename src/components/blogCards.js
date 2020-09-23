@@ -32,19 +32,23 @@ const BlogCards = ({}) => {
           <article key={c.title}>
             <img src={c.image.fluid.src} alt={c.title} />
 
-            <h5>{c.client}</h5>
-            <h4>{c.title}</h4>
+            <div className="textWrap">
+              <h4>{c.title}</h4>
+              <h5>{c.client}</h5>
+            </div>
           </article>
         )
       })}
 
-      {data.allContentfulCasePage.nodes.map((c, i) => {
+      {data.allContentfulCasePage.nodes.map(c => {
         return (
-          <article key={i + c.title}>
+          <article key={c.title}>
             <img src={c.image.fluid.src} alt={c.title} />
 
-            <h5>{c.client}</h5>
-            <h4>{c.title}</h4>
+            <div className="textWrap">
+              <h4>{c.title}</h4>
+              <h5>{c.client}</h5>
+            </div>
           </article>
         )
       })}
