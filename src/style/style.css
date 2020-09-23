@@ -8,6 +8,8 @@
   --sub3: #004583;
   --sub4: #c34f81;
   --sub5: #f18700;
+
+  --lightText: #8990A3;
 }
 
 @font-face {
@@ -37,6 +39,7 @@ body {
   border: 2px solid var(--colour2);
   color: var(--colour2);
   padding: 19px 53px;
+  background: none;
 }
 
 .secondaryButton p {

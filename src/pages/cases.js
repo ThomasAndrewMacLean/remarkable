@@ -7,7 +7,7 @@ import HighlightCase from "../components/highlightCase"
 import WhatWeDo from "../components/whatWeDo"
 import Book from "../components/book"
 import HappyClient from "../components/happyClient"
-import ContactUs from "../components/contactUs"
+import ContactUs2 from "../components/contactUs2"
 
 import SEO from "../components/seo"
 
@@ -16,12 +16,8 @@ const CasesPage = () => (
     <SEO title="Cases" />
 
     <HeroCases></HeroCases>
-    <HighlightCase />
-    <WhatWeDo />
-    <Book />
-    <HappyClient />
 
-    <ContactUs />
+    <ContactUs2 />
   </Layout>
 )
 

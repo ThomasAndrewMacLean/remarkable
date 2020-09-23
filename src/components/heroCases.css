@@ -21,3 +21,21 @@
   letter-spacing: 0em;
   text-align: left;
 }
+
+.heroCasesWrap .buttonWrap {
+  display: flex;
+  gap: 20px;
+}
+
+.heroCasesWrap .buttonWrap button {
+  background-color: white;
+  color: var(--lightText);
+  border: none;
+  border-radius: 4px;
+  padding: 14px 30px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}

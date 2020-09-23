@@ -24,6 +24,13 @@ const Hero = ({}) => {
     }
   `)
 
+  const buttons = [
+    "Show all",
+    "brand strategy",
+    "brand creation",
+    "brand protection",
+    "brand change",
+  ]
   const heroData = data.contentfulNewPage.contentModules.find(
     x => x.contentful_id === "418UtQ1UrHCI6vMY1PvkTV"
   )
@@ -31,6 +38,11 @@ const Hero = ({}) => {
     <div className="heroCasesWrap">
       <h2>Read about our latest client success stories</h2>
       <h4>I pick a service</h4>
+      <div className="buttonWrap">
+        {buttons.map(b => {
+          return <button key={b}>{b}</button>
+        })}
+      </div>
     </div>
   )
 }
