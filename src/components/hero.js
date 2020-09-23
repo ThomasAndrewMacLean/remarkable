@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import "./hero.css"
 
@@ -14,8 +15,10 @@ const Hero = ({}) => {
             contentful_id
             node_locale
             headerImage {
-              fluid {
+              fluid(maxWidth: 613) {
+                sizes
                 src
+                srcSet
               }
             }
           }
@@ -33,6 +36,7 @@ const Hero = ({}) => {
 
       <button className="ctaButton">Discover more</button>
       <div className="imageWrap">
+        {/* <Img fluid={heroData.headerImage.fluid}></Img> */}
         <img src={heroData.headerImage.fluid.src} alt="header image" />
       </div>
     </div>
