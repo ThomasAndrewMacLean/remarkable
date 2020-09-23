@@ -1,0 +1,26 @@
+.heroBolWrap {
+  height: 457px;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  width: 100%;
+  position: relative;
+}
+
+.heroBolWrap svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.heroBolWrap h2 {
+  font-size: 48px;
+  line-height: 57.5px;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+}

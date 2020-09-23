@@ -67,7 +67,7 @@ const Header = ({}) => {
           </Link>
 
           <Link
-            to="/cases"
+            to="/services"
             style={{
               color: `#333`,
               padding: "1rem",
@@ -78,7 +78,7 @@ const Header = ({}) => {
           </Link>
 
           <Link
-            to="/cases"
+            to="/news"
             style={{
               color: `#333`,
               padding: "1rem",
@@ -89,7 +89,7 @@ const Header = ({}) => {
           </Link>
 
           <Link
-            to="/cases"
+            to="/contact"
             style={{
               color: `#333`,
               padding: "1rem",
