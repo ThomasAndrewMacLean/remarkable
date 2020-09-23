@@ -8,7 +8,7 @@ import "./contactUs2.css"
 
 const ContactUs2 = ({}) => {
   const data = useStaticQuery(graphql`
-    query SiteHeroQuery {
+    query ContactUs2Query {
       placeholderImage: file(relativePath: { eq: "thierry.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
@@ -22,7 +22,6 @@ const ContactUs2 = ({}) => {
   return (
     <div className="contactUs2Wrap">
       <div className="left">
-          
         <Img fluid={data.placeholderImage.childImageSharp.fluid} />
       </div>
 
