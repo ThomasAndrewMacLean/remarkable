@@ -6,8 +6,13 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
 
 import "./case.css"
 
-const BlogTemplate = ({ data }) => {
-  const remarkableCase = data.allContentfulCasePage.nodes[0]
+const BlogTemplate = ({ data, pageContext }) => {
+  const remarkableCase = data.allContentfulCasePage.nodes.find(
+    x => x.slug === pageContext.slug
+  )
+  const otherCases = data.allContentfulCasePage.nodes.filter(
+    x => x.slug !== pageContext.slug
+  )
 
   var dateOptions = {
     // weekday: "long",
@@ -92,6 +97,25 @@ const BlogTemplate = ({ data }) => {
             }}
           ></p>
         </div>
+
+        <div className="relevantCasesWrap">
+          <h3 className="title">Relevant cases for you...</h3>
+          <div className="caseCardsWrap">
+            {otherCases.map(c => {
+              return (
+                <article key={c.title}>
+                  <a href={"/case/" + c.slug}>
+                    <img src={c.image.fluid.src} alt={c.title} />
+
+                    <h5>{c.client}</h5>
+
+                    <h4>{c.title}</h4>
+                  </a>
+                </article>
+              )
+            })}
+          </div>
+        </div>
       </article>
     </Layout>
   )
@@ -99,8 +123,8 @@ const BlogTemplate = ({ data }) => {
 export default BlogTemplate
 
 export const pageQuery = graphql`
-  query ProductById($slug: String!) {
-    allContentfulCasePage(filter: { slug: { eq: $slug } }) {
+  query ProductById {
+    allContentfulCasePage {
       nodes {
         id
         slug
