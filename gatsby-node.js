@@ -1,7 +1,38 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path")
+const caseTemplate = path.resolve(
+  __dirname,
+  "src",
+  "templates",
+  "case-template.js"
+)
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      allContentfulCasePage {
+        nodes {
+          id
+          slug
+          client
+          title
+          image {
+            fluid {
+              src
+            }
+          }
+        }
+      }
+    }
+  `)
 
-// You can delete this file if you're not using it
+  console.log(result)
+  result.data.allContentfulCasePage.nodes.forEach(node => {
+    createPage({
+      path: "case/" + node.slug,
+      component: caseTemplate,
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+}

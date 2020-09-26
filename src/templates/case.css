@@ -1,0 +1,41 @@
+.caseWrap {
+  width: 90%;
+  margin: auto;
+}
+.caseWrap h5 {
+  display: flex;
+  gap: 18px;
+  margin-top: 24px;
+  margin-bottom: 56px;
+}
+.caseWrap h5 span {
+  color: var(--colour2);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.caseWrap .briefWrap {
+  display: flex;
+}
+
+.caseWrap .briefWrap .brief,
+.caseWrap .briefWrap .image {
+  width: 50%;
+}
+.caseWrap .text p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.caseWrap .mainImage {
+  width: 100%;
+}
+
+.caseWrap .solutionWrap,
+.caseWrap .impactWrap {
+  margin: auto;
+  width: 90%;
+  margin-top: 77px;
+}
