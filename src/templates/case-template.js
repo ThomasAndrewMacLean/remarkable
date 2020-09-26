@@ -33,7 +33,7 @@ const BlogTemplate = ({ data }) => {
 
       <article className="caseWrap">
         <h5>
-          <span>Author: {remarkableCase.author.author}</span>
+          <span>Author: {remarkableCase.author?.author}</span>
           <span>Client: {remarkableCase.client}</span>
           <span>
             {new Date(remarkableCase.creationDate).toLocaleDateString(
@@ -45,7 +45,7 @@ const BlogTemplate = ({ data }) => {
 
         <div className="briefWrap">
           <div className="image">
-            <img src={remarkableCase.clientLogo.fluid.src} alt="" />
+            <img src={remarkableCase.clientLogo?.fluid.src} alt="" />
           </div>
           <div className="brief text">
             <h3>{remarkableCase.subtitle}</h3>
@@ -53,7 +53,7 @@ const BlogTemplate = ({ data }) => {
               className="textWrap"
               dangerouslySetInnerHTML={{
                 __html: documentToHtmlString(
-                  remarkableCase.theBrief.json,
+                  remarkableCase.theBrief?.json,
                   options
                 ),
               }}
@@ -63,7 +63,7 @@ const BlogTemplate = ({ data }) => {
 
         <img
           className="mainImage"
-          src={remarkableCase.image.fluid.src}
+          src={remarkableCase.image?.fluid.src}
           alt=""
         />
 
@@ -73,7 +73,7 @@ const BlogTemplate = ({ data }) => {
             className="textWrap"
             dangerouslySetInnerHTML={{
               __html: documentToHtmlString(
-                remarkableCase.shortDescriptionSolution.json,
+                remarkableCase.shortDescriptionSolution?.json,
                 options
               ),
             }}
@@ -86,7 +86,7 @@ const BlogTemplate = ({ data }) => {
             className="textWrap"
             dangerouslySetInnerHTML={{
               __html: documentToHtmlString(
-                remarkableCase.shortDescriptionImpact.json,
+                remarkableCase.shortDescriptionImpact?.json,
                 options
               ),
             }}
