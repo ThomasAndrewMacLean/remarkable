@@ -24,7 +24,7 @@ body {
 
 .ctaButton {
   color: white;
-
+  text-decoration: none;
   background-color: var(--colour2);
   padding: 19px 53px;
   border: none;

@@ -76,7 +76,7 @@ const BlogTemplate = ({ data, pageContext }) => {
               return (
                 <article key={c.title}>
                   <a href={"/news/" + c.slug}>
-                    <img src={c.image.fluid?.src} alt={c.title} />
+                    <img src={c.image.fluid.src} alt={c.title} />
 
                     <div className="textWrap">
                       <h4>{c.title}</h4>

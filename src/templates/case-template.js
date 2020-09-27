@@ -1,5 +1,6 @@
 import * as React from "react"
 import Layout from "../components/layout"
+import ContactUs from "../components/contactUs"
 import HeroBol from "../components/heroBol"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
@@ -101,7 +102,7 @@ const CaseTemplate = ({ data, pageContext }) => {
         <div className="relevantCasesWrap">
           <h3 className="title">Relevant cases for you...</h3>
           <div className="caseCardsWrap">
-            {otherCases.map(c => {
+            {otherCases.slice(0, 2).map(c => {
               return (
                 <article key={c.title}>
                   <a href={"/case/" + c.slug}>
@@ -115,7 +116,15 @@ const CaseTemplate = ({ data, pageContext }) => {
               )
             })}
           </div>
+
+          <div className="buttonWrap">
+            <a href="/cases" className="ctaButton">
+              check all cases
+            </a>
+          </div>
         </div>
+
+        <ContactUs />
       </article>
     </Layout>
   )
