@@ -75,12 +75,13 @@ const BlogTemplate = ({ data, pageContext }) => {
             {otherCases.map(c => {
               return (
                 <article key={c.title}>
-                  <a href={"/case/" + c.slug}>
-                    <img src={c.image.fluid.src} alt={c.title} />
+                  <a href={"/news/" + c.slug}>
+                    <img src={c.image.fluid?.src} alt={c.title} />
 
-                    <h5>{c.client}</h5>
-
-                    <h4>{c.title}</h4>
+                    <div className="textWrap">
+                      <h4>{c.title}</h4>
+                      <h5>{c.brief}</h5>
+                    </div>
                   </a>
                 </article>
               )
