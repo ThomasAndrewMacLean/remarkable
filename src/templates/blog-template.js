@@ -1,16 +1,17 @@
 import * as React from "react"
+import ContactUs2 from "../components/contactUs2"
 import Layout from "../components/layout"
 import HeroBol from "../components/heroBol"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
 
-import "./case.css"
+import "./blog.css"
 
-const CaseTemplate = ({ data, pageContext }) => {
-  const remarkableCase = data.allContentfulCasePage.nodes.find(
+const BlogTemplate = ({ data, pageContext }) => {
+  const remarkableCase = data.allContentfulBlogPage.nodes.find(
     x => x.slug === pageContext.slug
   )
-  const otherCases = data.allContentfulCasePage.nodes.filter(
+  const otherCases = data.allContentfulBlogPage.nodes.filter(
     x => x.slug !== pageContext.slug
   )
 
@@ -36,7 +37,7 @@ const CaseTemplate = ({ data, pageContext }) => {
         titleHtml={remarkableCase.title}
       ></HeroBol>
 
-      <article className="caseWrap">
+      <article className="blogWrap">
         <h5>
           <span>Author: {remarkableCase.author?.author}</span>
           <span>Client: {remarkableCase.client}</span>
@@ -48,58 +49,28 @@ const CaseTemplate = ({ data, pageContext }) => {
           </span>
         </h5>
 
-        <div className="briefWrap">
-          <div className="image">
-            <img src={remarkableCase.clientLogo?.fluid.src} alt="" />
-          </div>
-          <div className="brief text">
-            <h3>{remarkableCase.subtitle}</h3>
-            <p
-              className="textWrap"
-              dangerouslySetInnerHTML={{
-                __html: documentToHtmlString(
-                  remarkableCase.theBrief?.json,
-                  options
-                ),
-              }}
-            ></p>
-          </div>
-        </div>
-
-        <img
-          className="mainImage"
-          src={remarkableCase.image?.fluid.src}
-          alt=""
-        />
-
         <div className="solutionWrap text">
           <h3>{remarkableCase.subtitleSolution}</h3>
           <p
             className="textWrap"
             dangerouslySetInnerHTML={{
-              __html: documentToHtmlString(
-                remarkableCase.shortDescriptionSolution?.json,
-                options
-              ),
+              __html: documentToHtmlString(remarkableCase.text?.json, options),
             }}
           ></p>
         </div>
 
-        <div className="impactWrap text">
-          <h3>{remarkableCase.subtitleImpact}</h3>
-          <p
-            className="textWrap"
-            dangerouslySetInnerHTML={{
-              __html: documentToHtmlString(
-                remarkableCase.shortDescriptionImpact?.json,
-                options
-              ),
-            }}
-          ></p>
+        <div className="mainImageWrap">
+          <img
+            className="mainImage"
+            src={remarkableCase.image?.fluid.src}
+            alt=""
+          />
         </div>
+
+        <ContactUs2 />
 
         <div className="relevantCasesWrap">
-          <h3 className="title">Relevant cases for you...</h3>
+          <h3 className="title">Things you may find interesting too...</h3>
           <div className="caseCardsWrap">
             {otherCases.map(c => {
               return (
@@ -120,16 +91,20 @@ const CaseTemplate = ({ data, pageContext }) => {
     </Layout>
   )
 }
-export default CaseTemplate
+export default BlogTemplate
 
 export const pageQuery = graphql`
-  query CasesTemplateQuery {
-    allContentfulCasePage {
+  query BlogPageById {
+    allContentfulBlogPage {
       nodes {
         id
         slug
         client
+        brief
         title
+        text {
+          json
+        }
         image {
           fluid {
             src
@@ -144,23 +119,6 @@ export const pageQuery = graphql`
           author
         }
         creationDate
-        clientLogo {
-          fluid {
-            src
-          }
-        }
-        subtitle
-        shortDescriptionImpact {
-          json
-        }
-        subtitleSolution
-        shortDescriptionSolution {
-          json
-        }
-        subtitleImpact
-        theBrief {
-          json
-        }
       }
     }
   }

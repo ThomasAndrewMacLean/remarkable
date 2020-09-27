@@ -1,0 +1,54 @@
+.blogWrap {
+  width: 90%;
+  margin: auto;
+}
+.blogWrap h5 {
+  display: flex;
+  gap: 18px;
+  margin-top: 24px;
+  margin-bottom: 56px;
+}
+.blogWrap h5 span {
+  color: var(--lightText);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.blogWrap .briefWrap {
+  display: flex;
+}
+
+.blogWrap .briefWrap .brief,
+.blogWrap .briefWrap .image {
+  width: 50%;
+}
+.blogWrap .text p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.blogWrap .mainImage {
+  width: 70%;
+}
+
+.blogWrap .mainImageWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.blogWrap .solutionWrap,
+.blogWrap .impactWrap {
+  margin: auto;
+  width: 90%;
+  margin-top: 77px;
+}
+
+.relevantCasesWrap .title {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 121px;
+}

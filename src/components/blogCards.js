@@ -9,12 +9,13 @@ import "./blogCards.css"
 const BlogCards = ({}) => {
   const data = useStaticQuery(graphql`
     query BlogCardsQuery {
-      allContentfulCasePage {
+      allContentfulBlogPage {
         nodes {
           id
           slug
           client
           title
+          brief
           image {
             fluid {
               src
@@ -27,28 +28,17 @@ const BlogCards = ({}) => {
 
   return (
     <div className="blogCardsWrap">
-      {data.allContentfulCasePage.nodes.map(c => {
+      {data.allContentfulBlogPage.nodes.map(c => {
         return (
           <article key={c.title}>
-            <img src={c.image.fluid.src} alt={c.title} />
+            <a href={"/news/" + c.slug}>
+              <img src={c.image.fluid.src} alt={c.title} />
 
-            <div className="textWrap">
-              <h4>{c.title}</h4>
-              <h5>{c.client}</h5>
-            </div>
-          </article>
-        )
-      })}
-
-      {data.allContentfulCasePage.nodes.map(c => {
-        return (
-          <article key={c.title}>
-            <img src={c.image.fluid.src} alt={c.title} />
-
-            <div className="textWrap">
-              <h4>{c.title}</h4>
-              <h5>{c.client}</h5>
-            </div>
+              <div className="textWrap">
+                <h4>{c.title}</h4>
+                <h5>{c.brief}</h5>
+              </div>
+            </a>
           </article>
         )
       })}
