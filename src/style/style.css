@@ -49,3 +49,87 @@ body {
   font-size: 18px;
   font-weight: 700;
 }
+
+.servicesWrap {
+  width: 90%;
+  margin: auto;
+}
+
+.servicesWrap .ourApproach,
+.servicesWrap .experience {
+  width: 90%;
+  margin: auto;
+}
+
+.servicesWrap .ourApproach h2,
+.servicesWrap .experience h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 26.5px;
+  margin-top: 77px;
+  margin-bottom: 35px;
+}
+
+.servicesWrap .ourApproach p,
+.servicesWrap .experience p {
+  font-weight: 400;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.servicesWrap .serviceBlockWrap {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.servicesWrap .serviceBlockWrap .service {
+  width: calc(50% - 20px);
+  padding: 40px;
+  border-radius: 4px;
+  border: 3px solid black;
+}
+
+.servicesWrap .serviceBlockWrap .service p {
+  margin-bottom: 67px;
+}
+
+.servicesWrap .readMore {
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--colour1);
+  padding: 14px 24px;
+  font-family: inherit;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.servicesWrap .serviceBlockWrap .service.strategy {
+  border-color: #004483;
+}
+.servicesWrap .serviceBlockWrap .service.creation {
+  border-color: #c34e81;
+}
+.servicesWrap .serviceBlockWrap .service.protection {
+  border-color: #f18700;
+}
+.servicesWrap .serviceBlockWrap .service.change {
+  border-color: #5eb146;
+}
+
+.servicesWrap .serviceBlockWrap .service.strategy h2 {
+  color: #004483;
+}
+.servicesWrap .serviceBlockWrap .service.creation h2 {
+  color: #c34e81;
+}
+.servicesWrap .serviceBlockWrap .service.protection h2 {
+  color: #f18700;
+}
+.servicesWrap .serviceBlockWrap .service.change h2 {
+  color: #5eb146;
+}

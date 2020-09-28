@@ -6,7 +6,7 @@
   display: flex;
   gap: 18px;
   margin-top: 24px;
-  margin-bottom: 56px;
+  margin-bottom: 0px;
 }
 .caseWrap h5 span {
   color: var(--colour2);
