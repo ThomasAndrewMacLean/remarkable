@@ -133,3 +133,96 @@ body {
 .servicesWrap .serviceBlockWrap .service.change h2 {
   color: #5eb146;
 }
+
+.contactWrap {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 76px;
+}
+
+.contactWrap .left,
+.contactWrap .right {
+  width: 50%;
+  padding: 2rem;
+}
+.contactWrap .askUsAnything h2 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 26.5px;
+}
+
+.contactWrap .askUsAnything p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.contactWrap .addressSquares {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contactWrap .addressSquares .square {
+  width: 50%;
+}
+
+.contactWrap .addressSquares .square h3 {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.contactWrap .addressSquares .square p {
+  font-size: 16px;
+  line-height: 33px;
+}
+
+.contactWrap form {
+  border: 2px solid var(--colour2);
+  border-radius: 4px;
+  padding: 32px;
+}
+.contactWrap .row {
+  display: flex;
+  margin-bottom: 35px;
+}
+.contactWrap .row .inputWrap {
+  width: 50%;
+}
+
+.contactWrap form label.uppercase {
+  text-transform: uppercase;
+}
+.contactWrap form label,
+.contactWrap .privacy {
+  color: var(--lightText);
+
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.contactWrap .row input,
+.contactWrap .row textarea {
+  border: 1px solid var(--colour2);
+  border-radius: 4px;
+  min-height: 48px;
+  padding-left: 8px;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 40px;
+}
+
+.contactWrap .row textarea {
+  width: calc(200% - 22px);
+}
+
+.contactWrap .checkboxRow {
+  align-items: center;
+}
+
+.contactWrap .checkboxRow input {
+  margin-right: 1rem;
+}
