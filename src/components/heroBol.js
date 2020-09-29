@@ -9,7 +9,7 @@ const HeroBol = ({ image, titleHtml }) => {
       className="heroBolWrap"
       style={{
         background:
-          "url(" + image.fluid.src + ") no-repeat center center fixed",
+          "url(" + image?.fluid.src + ") no-repeat center center fixed",
       }}
     >
       <svg
