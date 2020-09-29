@@ -41,6 +41,7 @@
 }
 
 .heroCasesWrap .buttonWrap button.activeFilter {
-  border: 2px solid var(--colour1);
+  /* border: 2px solid var(--colour1); */
   color: var(--colour1);
+  font-weight: 700;
 }
