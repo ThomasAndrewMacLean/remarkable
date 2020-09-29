@@ -17,6 +17,7 @@
 
 .caseWrap .briefWrap {
   margin-top: 56px;
+  margin-bottom: 56px;
   display: flex;
 }
 
