@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Arrow from "./arrow"
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer"
 import Img from "gatsby-image"
@@ -57,6 +58,7 @@ const CaseCards = ({ filter }) => {
                   <span key={x.title}>{x.title}</span>
                 ))}
               </div>
+              <Arrow />
             </a>
           </article>
         )
