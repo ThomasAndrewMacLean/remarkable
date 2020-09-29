@@ -102,12 +102,12 @@ const ServicesPage = () => {
         titleHtml={serviceData.heroText}
       />
       <div className="servicesWrap">
-        <p
+        <div
           className="ourApproach"
           dangerouslySetInnerHTML={{
             __html: documentToHtmlString(serviceData.ourApproach.json, options),
           }}
-        ></p>
+        ></div>
 
         <div className="serviceBlockWrap">
           <div className="service strategy">
@@ -142,12 +142,12 @@ const ServicesPage = () => {
           </div>
         </div>
 
-        <p
+        <div
           className="experience"
           dangerouslySetInnerHTML={{
             __html: documentToHtmlString(serviceData.experience.json, options),
           }}
-        ></p>
+        ></div>
       </div>
 
       <div className="relevantCasesWrap">

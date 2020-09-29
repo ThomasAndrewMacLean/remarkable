@@ -57,11 +57,11 @@ const Book = ({}) => {
     <div className="bookWrap">
       <div className="textWrap">
         <h4>{bookData.headline}</h4>
-        <p
+        <div
           dangerouslySetInnerHTML={{
             __html: documentToHtmlString(bookData.copyRich.json, options),
           }}
-        ></p>
+        ></div>
 
         <a href="">{bookData.ctaTitle}</a>
       </div>

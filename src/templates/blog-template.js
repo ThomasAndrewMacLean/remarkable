@@ -51,12 +51,12 @@ const BlogTemplate = ({ data, pageContext }) => {
 
         <div className="solutionWrap text">
           <h3>{remarkableCase.subtitleSolution}</h3>
-          <p
+          <div
             className="textWrap"
             dangerouslySetInnerHTML={{
               __html: documentToHtmlString(remarkableCase.text?.json, options),
             }}
-          ></p>
+          ></div>
         </div>
 
         <div className="mainImageWrap">

@@ -73,7 +73,7 @@ const ContactPage = () => {
       <HeroBol image={contactData.heroImage} titleHtml={contactData.heroText} />
       <div className="contactWrap">
         <div className="left">
-          <p
+          <div
             className="askUsAnything"
             dangerouslySetInnerHTML={{
               __html: documentToHtmlString(
@@ -81,23 +81,23 @@ const ContactPage = () => {
                 options
               ),
             }}
-          ></p>
+          ></div>
 
           <div className="addressSquares">
-            <p
+            <div
               className="square"
               dangerouslySetInnerHTML={{
                 __html: documentToHtmlString(contactData.address.json, options),
               }}
-            ></p>
+            ></div>
 
-            <p
+            <div
               className="square"
               dangerouslySetInnerHTML={{
                 __html: documentToHtmlString(contactData.email.json, options),
               }}
-            ></p>
-            <p
+            ></div>
+            <div
               className="square"
               dangerouslySetInnerHTML={{
                 __html: documentToHtmlString(
@@ -105,8 +105,8 @@ const ContactPage = () => {
                   options
                 ),
               }}
-            ></p>
-            <p
+            ></div>
+            <div
               className="square"
               dangerouslySetInnerHTML={{
                 __html: documentToHtmlString(
@@ -114,7 +114,7 @@ const ContactPage = () => {
                   options
                 ),
               }}
-            ></p>
+            ></div>
           </div>
         </div>
         <div className="right">
