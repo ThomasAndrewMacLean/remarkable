@@ -40,17 +40,6 @@ const CaseCards = ({}) => {
           </article>
         )
       })}
-
-      {data.allContentfulCasePage.nodes.map((c, i) => {
-        return (
-          <article key={i + c.title}>
-            <img src={c.image.fluid.src} alt={c.title} />
-
-            <h5>{c.client}</h5>
-            <h4>{c.title}</h4>
-          </article>
-        )
-      })}
     </div>
   )
 }

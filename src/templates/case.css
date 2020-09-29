@@ -16,12 +16,20 @@
 }
 
 .caseWrap .briefWrap {
+  margin-top: 56px;
   display: flex;
 }
 
 .caseWrap .briefWrap .brief,
 .caseWrap .briefWrap .image {
   width: 50%;
+}
+
+.caseWrap .briefWrap .image img {
+  height: 200px;
+  max-width: 70%;
+  object-fit: contain;
+  margin-left: 10%;
 }
 .caseWrap .text p {
   font-size: 16px;
