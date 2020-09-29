@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -11,14 +11,17 @@ import ContactUs2 from "../components/contactUs2"
 
 import SEO from "../components/seo"
 
-const CasesPage = () => (
-  <Layout>
-    <SEO title="Cases" />
+const CasesPage = () => {
+  const [filter, setFilter] = useState()
+  return (
+    <Layout>
+      <SEO title="Cases" />
 
-    <HeroCases></HeroCases>
-    <CaseCards></CaseCards>
-    <ContactUs2 />
-  </Layout>
-)
+      <HeroCases setFilter={setFilter}></HeroCases>
+      <CaseCards filter={filter}></CaseCards>
+      <ContactUs2 />
+    </Layout>
+  )
+}
 
 export default CasesPage

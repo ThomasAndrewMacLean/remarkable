@@ -40,3 +40,8 @@
   color: inherit;
   text-decoration: none;
 }
+
+.caseCardsWrap .categories {
+  display: flex;
+  gap: 1rem;
+}

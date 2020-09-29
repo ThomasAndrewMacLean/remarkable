@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import "./heroCases.css"
 
-const Hero = ({}) => {
+const Hero = ({ setFilter }) => {
   const data = useStaticQuery(graphql`
     query HeroCasesQuery {
       contentfulNewPage(title: { eq: "Homepage" }) {
@@ -34,13 +34,23 @@ const Hero = ({}) => {
   const heroData = data.contentfulNewPage.contentModules.find(
     x => x.contentful_id === "418UtQ1UrHCI6vMY1PvkTV"
   )
+
   return (
     <div className="heroCasesWrap">
       <h2>Read about our latest client success stories</h2>
       <h4>I pick a service</h4>
       <div className="buttonWrap">
         {buttons.map(b => {
-          return <button key={b}>{b}</button>
+          return (
+            <button
+              onClick={() => {
+                setFilter(b)
+              }}
+              key={b}
+            >
+              {b}
+            </button>
+          )
         })}
       </div>
     </div>
