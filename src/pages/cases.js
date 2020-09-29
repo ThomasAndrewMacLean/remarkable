@@ -12,12 +12,12 @@ import ContactUs2 from "../components/contactUs2"
 import SEO from "../components/seo"
 
 const CasesPage = () => {
-  const [filter, setFilter] = useState()
+  const [filter, setFilter] = useState("Show all")
   return (
     <Layout>
       <SEO title="Cases" />
 
-      <HeroCases setFilter={setFilter}></HeroCases>
+      <HeroCases setFilter={setFilter} filter={filter}></HeroCases>
       <CaseCards filter={filter}></CaseCards>
       <ContactUs2 />
     </Layout>

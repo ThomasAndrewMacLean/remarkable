@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import "./heroCases.css"
 
-const Hero = ({ setFilter }) => {
+const Hero = ({ setFilter, filter }) => {
   const data = useStaticQuery(graphql`
     query HeroCasesQuery {
       contentfulNewPage(title: { eq: "Homepage" }) {
@@ -47,6 +47,7 @@ const Hero = ({ setFilter }) => {
                 setFilter(b)
               }}
               key={b}
+              className={b === filter ? "activeFilter" : ""}
             >
               {b}
             </button>
