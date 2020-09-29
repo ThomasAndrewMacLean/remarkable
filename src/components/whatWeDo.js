@@ -41,12 +41,12 @@ const WhatWeDo = ({}) => {
   return (
     <div className="whatWeDoWrap">
       <h4>{whatWeDoData.title}</h4>
-      <p
+      <div
         className="textWrap"
         dangerouslySetInnerHTML={{
           __html: documentToHtmlString(whatWeDoData.text.json, options),
         }}
-      ></p>
+      ></div>
 
       <div className="ctaWrap">
         <Link to="services">

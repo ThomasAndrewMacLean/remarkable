@@ -55,7 +55,7 @@ const CaseTemplate = ({ data, pageContext }) => {
           </div>
           <div className="brief text">
             <h3>{remarkableCase.subtitle}</h3>
-            <p
+            <div
               className="textWrap"
               dangerouslySetInnerHTML={{
                 __html: documentToHtmlString(
@@ -63,7 +63,7 @@ const CaseTemplate = ({ data, pageContext }) => {
                   options
                 ),
               }}
-            ></p>
+            ></div>
           </div>
         </div>
 
@@ -75,7 +75,7 @@ const CaseTemplate = ({ data, pageContext }) => {
 
         <div className="solutionWrap text">
           <h3>{remarkableCase.subtitleSolution}</h3>
-          <p
+          <div
             className="textWrap"
             dangerouslySetInnerHTML={{
               __html: documentToHtmlString(
@@ -83,12 +83,12 @@ const CaseTemplate = ({ data, pageContext }) => {
                 options
               ),
             }}
-          ></p>
+          ></div>
         </div>
 
         <div className="impactWrap text">
           <h3>{remarkableCase.subtitleImpact}</h3>
-          <p
+          <div
             className="textWrap"
             dangerouslySetInnerHTML={{
               __html: documentToHtmlString(
@@ -96,7 +96,7 @@ const CaseTemplate = ({ data, pageContext }) => {
                 options
               ),
             }}
-          ></p>
+          ></div>
         </div>
 
         <div className="relevantCasesWrap">
