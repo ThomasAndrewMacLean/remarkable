@@ -1,44 +1,33 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Arrow from "./arrow"
 import "./highlightCase.css"
 
 const HighlightCase = ({}) => {
   const data = useStaticQuery(graphql`
-    query HighlightQuery {
-      contentfulNewPage(title: { eq: "Homepage" }) {
-        contentModules {
-          ... on ContentfulMainCta {
-            id
-            buttonText
+    query MyHighlightsQuery {
+      allContentfulCasePage(filter: { highlightedCase: { eq: true } }) {
+        nodes {
+          image {
+            fluid {
+              src
+            }
           }
-          ... on ContentfulLayoutHighlightedCase {
-            id
-            contentful_id
+          client
+          serviceCartegories {
             title
-            image {
-              fluid {
-                src
-              }
-            }
-            client
-            cta
-            services {
-              title
-              color
-            }
           }
+          title
+          slug
         }
       }
     }
   `)
 
-  const highlightCases = data.contentfulNewPage.contentModules.filter(
-    x => x.contentful_id === "2ppwgLQCcpke4UHCNAlbWL"
-  )
-  const cta = data.contentfulNewPage.contentModules.find(
-    x => x.id === "26c0838b-abfb-5780-9535-48489d6d703f"
-  )
+  const highlightCases = data.allContentfulCasePage.nodes
+  // const cta = data.contentfulNewPage.contentModules.find(
+  //   x => x.id === "26c0838b-abfb-5780-9535-48489d6d703f"
+  // )
   return (
     <div className="highlightWrap">
       {highlightCases.map((c, i) => {
@@ -52,9 +41,12 @@ const HighlightCase = ({}) => {
 
               <h4>{c.title}</h4>
               <div className="services">
-                {c.services.map((s, i) => {
+                {(c.serviceCartegories || []).map((s, i) => {
                   return <span key={s.title + i}>{s.title}</span>
                 })}
+              </div>
+              <div className="arrow">
+                <Arrow></Arrow>
               </div>
             </div>
             <div className="imageWrap">
@@ -71,7 +63,7 @@ const HighlightCase = ({}) => {
           marginBottom: "97px",
         }}
       >
-        <button className="ctaButton">{cta.buttonText}</button>
+        <button className="ctaButton">View more cases</button>
       </div>
     </div>
   )
