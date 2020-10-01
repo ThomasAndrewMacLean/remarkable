@@ -46,7 +46,9 @@ const HighlightCase = ({}) => {
                 })}
               </div>
               <div className="arrow">
-                <Arrow></Arrow>
+                <a href={"/case/" + c.slug}>
+                  <Arrow></Arrow>
+                </a>
               </div>
             </div>
             <div className="imageWrap">
